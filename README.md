@@ -4,7 +4,7 @@ A modern Admin Dashboard for managing job listings built with React and Supabase
 
 ## 🚀 Live Demo
 
-[Add your Lovable live link here]
+[https://mini-admin-dashboard-sable.vercel.app/]
 
 ## 📋 Features
 
@@ -100,6 +100,6 @@ src/
 
 ## 📄 Submission
 
-- **Live Link**: [Your Lovable URL]
-- **GitHub Repo**: [Your GitHub URL]
+- **Live Link**: [https://mini-admin-dashboard-sable.vercel.app/]
+- **GitHub Repo**: [https://github.com/THUTAHEMALATHA/Mini-Admin-Dashboard]
 - **Documentation**: This file
