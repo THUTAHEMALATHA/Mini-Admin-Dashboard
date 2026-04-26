@@ -31,10 +31,20 @@ export const AuthProvider = ({ children }) => {
     return () => subscription.unsubscribe();
   }, []);
 
+  // Toggle this to true to enable dummy login for testing
+  const useDummyLogin = false;
+
   const signIn = async (email, password) => {
-    const data = await supabaseSignIn(email, password);
-    setUser(data.user);
-    return data;
+    if (useDummyLogin) {
+      // Dummy login: accept any email/password
+      const dummyUser = { id: "dummy-id", email };
+      setUser(dummyUser);
+      return { user: dummyUser, session: null };
+    } else {
+      const data = await supabaseSignIn(email, password);
+      setUser(data.user);
+      return data;
+    }
   };
 
   const logout = async () => {

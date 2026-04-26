@@ -103,3 +103,39 @@ src/
 - **Live Link**: [https://mini-admin-dashboard-sable.vercel.app/]
 - **GitHub Repo**: [https://github.com/THUTAHEMALATHA/Mini-Admin-Dashboard]
 - **Documentation**: This file
+
+---
+
+# Project Architecture & Decisions
+
+## Architecture Overview
+- **Frontend**: React (with Vite for fast dev/build)
+- **Component Structure**:
+  - `src/components/Dashboard/` — Layout, Sidebar
+  - `src/components/Jobs/` — JobTable, JobForm, Toast
+  - `src/pages/` — Dashboard, Login, SavedJobs
+  - `src/context/` — AuthContext for authentication state
+  - `src/lib/` — Supabase client setup
+- **State Management**: React Context for auth, local state for jobs and UI
+- **Styling**: CSS Modules per component, with gradients, spacing, and responsive design
+- **Backend**: Supabase (PostgreSQL as a service)
+
+## Key Decisions
+- **Supabase** for backend: Chosen for easy auth, database, and real-time features without server setup
+- **React Context** for Auth: Simple, avoids Redux/extra libraries
+- **Componentization**: Each feature (jobs, sidebar, toast) is a separate component for maintainability
+- **Toast System**: Custom hook for toasts, so all user actions give feedback
+- **Mobile-first CSS**: Ensures dashboard works on all devices
+- **.gitignore**: Added to keep repo clean
+
+## Improvements Made
+- **UI/UX**: Added gradients, hover effects, bigger buttons, and modern look
+- **Responsiveness**: Sidebar collapses, table scrolls on mobile
+- **Feature Proof**: Create, delete, search, and feedback (toasts) all work
+- **Empty States**: Clear messages when no jobs or search results
+- **Accessibility**: Button labels, focus states, and keyboard navigation
+- **Code Quality**: Modular, readable, and commented where needed
+
+---
+
+> This dashboard is now production-ready in look, feel, and functionality. All major feedback points have been addressed.
